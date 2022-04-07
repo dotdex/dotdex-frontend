@@ -1,5 +1,5 @@
 import React from 'react'
-import { Trade, TradeType } from '@wagyu-swap/sdk'
+import { Trade, TradeType } from '@dotdex-swap/sdk'
 import { Text } from 'packages/uikit'
 import { Field } from 'state/swap/actions'
 import { useUserSlippageTolerance } from 'state/user/hooks'

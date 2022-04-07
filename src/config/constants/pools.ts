@@ -1,4 +1,4 @@
-import { ChainId } from '@wagyu-swap/sdk'
+import { ChainId } from '@dotdex-swap/sdk'
 import { serializeTokens } from './tokens'
 import { SerializedPoolConfig, PoolCategory } from './types'
 

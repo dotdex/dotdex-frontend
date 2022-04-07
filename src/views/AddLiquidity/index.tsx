@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@wagyu-swap/sdk'
+import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@dotdex-swap/sdk'
 import { Button, Text, Flex, AddIcon, CardBody, Message, useModal } from 'packages/uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { useIsTransactionUnsupported } from 'hooks/Trades'

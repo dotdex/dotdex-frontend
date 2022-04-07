@@ -1,4 +1,4 @@
-import { ChainId, Pair, Token } from '@wagyu-swap/sdk'
+import { ChainId, Pair, Token } from '@dotdex-swap/sdk'
 import flatMap from 'lodash/flatMap'
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

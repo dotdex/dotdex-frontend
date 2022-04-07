@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardHeader, Heading, Text, Flex } from 'packages/uikit'
-import { Token } from '@wagyu-swap/sdk'
+import { Token } from '@dotdex-swap/sdk'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import { TokenPairImage } from 'components/TokenImage'

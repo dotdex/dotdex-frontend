@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token } from '@wagyu-swap/sdk'
+import { ChainId, JSBI, Percent, Token } from '@dotdex-swap/sdk'
 import { mainnetTokens, testnetTokens } from './tokens'
 import addresses from './addresses.json'
 

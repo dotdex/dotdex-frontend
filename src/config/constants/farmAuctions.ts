@@ -1,4 +1,4 @@
-import { Token, Pair, ChainId } from '@wagyu-swap/sdk'
+import { Token, Pair, ChainId } from '@dotdex-swap/sdk'
 import tokens from './tokens'
 import { FarmAuctionBidderConfig } from './types'
 

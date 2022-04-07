@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useFarmUser } from 'state/farms/hooks'
 import { useTranslation } from 'contexts/Localization'
 import { Text } from 'packages/uikit'
-import { Token } from '@wagyu-swap/sdk'
+import { Token } from '@dotdex-swap/sdk'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { TokenPairImage } from 'components/TokenImage'
 

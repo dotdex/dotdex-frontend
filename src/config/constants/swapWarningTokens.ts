@@ -1,4 +1,4 @@
-import { Token } from '@wagyu-swap/sdk'
+import { Token } from '@dotdex-swap/sdk'
 import tokens from 'config/constants/tokens'
 
 const { bondly, safemoon } = tokens

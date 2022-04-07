@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { JSBI, Pair, Percent } from '@wagyu-swap/sdk'
+import { JSBI, Pair, Percent } from '@dotdex-swap/sdk'
 import { Button, Text, ChevronUpIcon, ChevronDownIcon, Card, CardBody, Flex, CardProps, AddIcon } from 'packages/uikit'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'

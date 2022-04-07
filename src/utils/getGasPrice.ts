@@ -1,4 +1,4 @@
-import { ChainId } from '@wagyu-swap/sdk'
+import { ChainId } from '@dotdex-swap/sdk'
 import store from 'state'
 import { GAS_PRICE_GWEI } from 'state/user/hooks/helpers'
 

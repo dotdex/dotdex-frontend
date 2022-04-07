@@ -14,7 +14,7 @@ import {
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import useToast from 'hooks/useToast'
-import { Token } from '@wagyu-swap/sdk'
+import { Token } from '@dotdex-swap/sdk'
 import { formatNumber } from 'utils/formatBalance'
 import useHarvestPool from '../../../hooks/useHarvestPool'
 import useStakePool from '../../../hooks/useStakePool'

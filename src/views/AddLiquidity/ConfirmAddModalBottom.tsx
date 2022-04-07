@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@wagyu-swap/sdk'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@dotdex-swap/sdk'
 import React from 'react'
 import { Button, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'

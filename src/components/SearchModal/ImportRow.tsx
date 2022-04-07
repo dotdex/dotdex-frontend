@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react'
-import { Token } from '@wagyu-swap/sdk'
+import { Token } from '@dotdex-swap/sdk'
 import { Button, Text, CheckmarkCircleIcon } from 'packages/uikit'
 import { AutoRow, RowFixed } from 'components/Layout/Row'
 import { AutoColumn } from 'components/Layout/Column'

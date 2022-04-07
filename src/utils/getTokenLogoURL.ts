@@ -1,4 +1,4 @@
-import { ChainId } from '@wagyu-swap/sdk'
+import { ChainId } from '@dotdex-swap/sdk'
 
 const getTokenLogoURL = (address: string) => {
   const chainId = process.env.REACT_APP_CHAIN_ID

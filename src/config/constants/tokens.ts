@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@wagyu-swap/sdk'
+import { ChainId, Token } from '@dotdex-swap/sdk'
 import { serializeToken } from 'state/user/hooks/helpers'
 import { SerializedToken } from './types'
 import addresses from './addresses.json'

@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@wagyu-swap/sdk'
+import { ChainId, Token } from '@dotdex-swap/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
