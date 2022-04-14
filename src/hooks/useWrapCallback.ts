@@ -48,13 +48,13 @@ export default function useWrapCallback(
                   const txReceipt = await callWithGasPrice(wethContract, 'deposit', undefined, {
                     value: `0x${inputAmount.raw.toString(16)}`,
                   })
-                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} VLX to WVLX` })
+                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} GLMR to WGLMR` })
                 } catch (error) {
                   console.error('Could not deposit', error)
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : 'Insufficient VLX balance',
+        inputError: sufficientBalance ? undefined : 'Insufficient GLMR balance',
       }
     }
     if (currencyEquals(WETH[chainId], inputCurrency) && outputCurrency === ETHER) {
@@ -67,13 +67,13 @@ export default function useWrapCallback(
                   const txReceipt = await callWithGasPrice(wethContract, 'withdraw', [
                     `0x${inputAmount.raw.toString(16)}`,
                   ])
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WVLX to VLX` })
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WGLMR to GLMR` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : 'Insufficient WVLX balance',
+        inputError: sufficientBalance ? undefined : 'Insufficient WGLMR balance',
       }
     }
     return NOT_APPLICABLE

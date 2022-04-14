@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, css } from 'styled-components'
-import { WAG_LP_DECIMALS, WAG_LP_SYMBOL } from 'config/constants'
+import { DOTDEX_LP_DECIMALS, DOTDEX_LP_SYMBOL } from 'config/constants'
 import { useTranslation } from 'contexts/Localization'
 import { Button, Flex, LinkExternal, MetamaskIcon, Text } from 'packages/uikit'
 import { FarmWithStakedValue } from 'views/Farms/components/FarmCard/FarmCard'
@@ -178,7 +178,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
               variant="text"
               p="0"
               height="auto"
-              onClick={() => registerToken(tokenAddress, WAG_LP_SYMBOL, WAG_LP_DECIMALS)}
+              onClick={() => registerToken(tokenAddress, DOTDEX_LP_SYMBOL, DOTDEX_LP_DECIMALS)}
             >
               <Text color="primary">{t('Add to Metamask')}</Text>
               <MetamaskIcon ml="4px" />

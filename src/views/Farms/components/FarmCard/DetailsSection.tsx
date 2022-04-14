@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'contexts/Localization'
-import { WAG_LP_DECIMALS, WAG_LP_SYMBOL } from 'config/constants'
+import { DOTDEX_LP_DECIMALS, DOTDEX_LP_SYMBOL } from 'config/constants'
 import styled from 'styled-components'
 import { Text, Flex, LinkExternal, Skeleton, Button, MetamaskIcon } from 'packages/uikit'
 import { useWeb3React } from '@web3-react/core'
@@ -55,7 +55,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
             variant="text"
             p="0"
             height="auto"
-            onClick={() => registerToken(tokenAddress, WAG_LP_SYMBOL, WAG_LP_DECIMALS)}
+            onClick={() => registerToken(tokenAddress, DOTDEX_LP_SYMBOL, DOTDEX_LP_DECIMALS)}
           >
             <Text color="primary" fontWeight="400">
               {t('Add to Metamask')}

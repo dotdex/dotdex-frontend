@@ -12,7 +12,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] = [
     account: '0x9Ed5a62535A5Dd2dB2d9bB21bAc42035Af47F630',
     farmName: 'NAV-BNB',
     tokenAddress: '0xBFEf6cCFC830D3BaCA4F6766a0d4AaA242Ca9F3D',
-    quoteToken: tokens.wvlx,
+    quoteToken: tokens.wglmr,
     tokenName: 'Navcoin',
     projectSite: 'https://navcoin.org/en',
   },
@@ -20,7 +20,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] = [
     account: '0x33723811B0FCa2a751f3912B80603Fe11499D894',
     farmName: 'WSG-BNB',
     tokenAddress: '0xA58950F05FeA2277d2608748412bf9F802eA4901',
-    quoteToken: tokens.wvlx,
+    quoteToken: tokens.wglmr,
     tokenName: 'Wall Street Games',
     projectSite: 'https://wsg.gg/',
   },
@@ -32,7 +32,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] = [
 const UNKNOWN_BIDDER: FarmAuctionBidderConfig = {
   account: '',
   tokenAddress: '',
-  quoteToken: tokens.wvlx,
+  quoteToken: tokens.wglmr,
   farmName: 'Unknown',
   tokenName: 'Unknown',
 }

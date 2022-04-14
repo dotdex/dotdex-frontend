@@ -12,7 +12,7 @@ type ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.MAINNET]: [
-    mainnetTokens.wvlx,
+    mainnetTokens.wglmr,
     mainnetTokens.cake,
     mainnetTokens.usdt,
     mainnetTokens.weth,
@@ -20,7 +20,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     mainnetTokens.busd,
     mainnetTokens.usdv,
   ],
-  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.TESTNET]: [testnetTokens.wglmr, testnetTokens.cake, testnetTokens.usdt],
 }
 
 /**
@@ -43,17 +43,17 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MAINNET]: [mainnetTokens.usdt, mainnetTokens.cake],
-  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.TESTNET]: [testnetTokens.wglmr, testnetTokens.cake, testnetTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  [ChainId.MAINNET]: [mainnetTokens.wvlx, mainnetTokens.usdt, mainnetTokens.usdc],
-  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.MAINNET]: [mainnetTokens.wglmr, mainnetTokens.usdt, mainnetTokens.usdc],
+  [ChainId.TESTNET]: [testnetTokens.wglmr, testnetTokens.cake, testnetTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.MAINNET]: [[mainnetTokens.cake, mainnetTokens.wvlx]],
+  [ChainId.MAINNET]: [[mainnetTokens.cake, mainnetTokens.wglmr]],
 }
 
 export const NetworkContextName = 'NETWORK'
@@ -97,5 +97,5 @@ export { default as farmsConfig } from './farms'
 export { default as poolsConfig } from './pools'
 export { default as ifosConfig } from './ifo'
 
-export const WAG_LP_SYMBOL = 'Wagyu-LP'
-export const WAG_LP_DECIMALS = 18
+export const DOTDEX_LP_SYMBOL = 'DotDex-LP'
+export const DOTDEX_LP_DECIMALS = 18

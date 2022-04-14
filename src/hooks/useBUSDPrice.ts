@@ -6,7 +6,7 @@ import { PairState, usePairs } from './usePairs'
 import { wrappedCurrency } from '../utils/wrappedCurrency'
 
 const USDT_MAINNET = mainnetTokens.usdt
-const { wvlx: WVLX } = tokens
+const { wglmr: WGLMR } = tokens
 
 /**
  * Returns the price in BUSD of the input currency
@@ -17,9 +17,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
   const wrapped = wrappedCurrency(currency, chainId)
   const tokenPairs: [Currency | undefined, Currency | undefined][] = useMemo(
     () => [
-      [chainId && wrapped && currencyEquals(WVLX, wrapped) ? undefined : currency, chainId ? WVLX : undefined],
+      [chainId && wrapped && currencyEquals(WGLMR, wrapped) ? undefined : currency, chainId ? WGLMR : undefined],
       [wrapped?.equals(USDT_MAINNET) ? undefined : wrapped, chainId === ChainId.MAINNET ? USDT_MAINNET : undefined],
-      [chainId ? WVLX : undefined, chainId === ChainId.MAINNET ? USDT_MAINNET : undefined],
+      [chainId ? WGLMR : undefined, chainId === ChainId.MAINNET ? USDT_MAINNET : undefined],
     ],
     [chainId, currency, wrapped],
   )
@@ -31,9 +31,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return undefined
     }
     // handle weth/eth
-    if (wrapped.equals(WVLX)) {
+    if (wrapped.equals(WGLMR)) {
       if (usdtPair) {
-        const price = usdtPair.priceOf(WVLX)
+        const price = usdtPair.priceOf(WGLMR)
         return new Price(currency, USDT_MAINNET, price.denominator, price.numerator)
       }
       return undefined
@@ -43,14 +43,14 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return new Price(USDT_MAINNET, USDT_MAINNET, '1', '1')
     }
 
-    const ethPairETHAmount = ethPair?.reserveOf(WVLX)
+    const ethPairETHAmount = ethPair?.reserveOf(WGLMR)
 
     const ethPairETHBUSDValue: JSBI =
       ethPairETHAmount &&
       usdtEthPair &&
       ethPairETHAmount.toFixed(0) !== '0' &&
       Number((usdtEthPair as any).tokenAmounts[0].toFixed()) !== 0
-        ? usdtEthPair.priceOf(WVLX).quote(ethPairETHAmount).raw
+        ? usdtEthPair.priceOf(WGLMR).quote(ethPairETHAmount).raw
         : JSBI.BigInt(0)
 
     // all other tokens
@@ -64,9 +64,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return new Price(currency, USDT_MAINNET, price.denominator, price.numerator)
     }
     if (ethPairState === PairState.EXISTS && ethPair && usdtEthPairState === PairState.EXISTS && usdtEthPair) {
-      if (usdtEthPair.reserveOf(USDT_MAINNET).greaterThan('0') && ethPair.reserveOf(WVLX).greaterThan('0')) {
+      if (usdtEthPair.reserveOf(USDT_MAINNET).greaterThan('0') && ethPair.reserveOf(WGLMR).greaterThan('0')) {
         const ethBusdPrice = usdtEthPair.priceOf(USDT_MAINNET)
-        const currencyEthPrice = ethPair.priceOf(WVLX)
+        const currencyEthPrice = ethPair.priceOf(WGLMR)
         const busdPrice = ethBusdPrice.multiply(currencyEthPrice).invert()
 
         return new Price(currency, USDT_MAINNET, busdPrice.denominator, busdPrice.numerator)
@@ -83,6 +83,6 @@ export const useCakeBusdPrice = (): Price | undefined => {
 }
 
 export const useBNBBusdPrice = (): Price | undefined => {
-  const bnbBusdPrice = useBUSDPrice(tokens.wvlx)
+  const bnbBusdPrice = useBUSDPrice(tokens.wglmr)
   return bnbBusdPrice
 }
